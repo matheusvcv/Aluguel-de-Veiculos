@@ -1,6 +1,6 @@
 <?php
 
-	$conexao = new mysqli("localhost", "root", "", "sistema-estacionamento");
+	$conexao = new mysqli("localhost", "root", "", "aluguel-veiculos");
 
 	$conexao-> set_charset('utf8');
 
