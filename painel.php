@@ -16,7 +16,7 @@
  		<?php echo "Seja bem vindo, colaborador " . strtoupper($_SESSION['nome']) . " o que deseja fazer?"; ?>
  		
  		<p>
- 		<label><a href="">Cadastrar um novo Cliente:</a></label>
+ 		<label><a href="cadastro.php">Cadastrar um novo Cliente:</a></label>
  		</p>
  		<p>
  			<label><a href="">Consultar o banco de clientes</a></label>
