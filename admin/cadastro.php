@@ -1,7 +1,15 @@
 <?php
-	require "protect.php";
-	require "conexao.php";
-	require "cliente.php";
+	require "../protect.php";
+	require "../conexao.php";
+	require "../src/cliente.php";
+
+	if($_SERVER['REQUEST_METHOD'] === 'POST'){
+
+		$inserir = New Cliente($conexao);
+		$inserir-> insereCliente($_POST['nome'], $_POST['cpf'], $_POST['nascimento'], $_POST['email'], $_POST['telefone'], $_POST['cidade'], $_POST['bairro'], $_POST['logradouro'], $_POST['numero'], $_POST['frequencia']);
+
+		header("Location: consulta.php");
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,11 +29,11 @@
 				<label>CPF do Cliente: </label><input type="text" name="cpf" placeholder="Digite o CPF do Cliente">
 			</p>
 			<p>
-				<label>Data de nascimento: </label><input type="date" name="Nascimento" placeholder="">
+				<label>Data de nascimento: </label><input type="date" name="nascimento" placeholder="">
 			</p>
 			<strong><p>Dados para Contato: </p></strong><p>
 			<p>
-				<label>E-Mail: </label><input type="text" name="e-mail" placeholder="Melhor E-Mail">
+				<label>E-Mail: </label><input type="text" name="email" placeholder="Melhor E-Mail">
 			</p>
 			<p>
 				<label>Telefone: </label><input type="text" name="telefone" placeholder="Telefone para Contato">
@@ -46,7 +54,7 @@
 			<p>Informações adicionais: </p>
 			<p>
 				<strong>Com qual frequência o cliente utiliza os serviços da nossa empresa?</strong>
-				<select name="frequência">
+				<select name="frequencia">
 					<option value="ND">Escolha uma opção</option>
 					<option value="Ocasionalmente">Ocasionalmente</option>
 					<option value="Mensalmente">Mensalmente</option>
