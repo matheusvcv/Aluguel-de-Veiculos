@@ -1,0 +1,12 @@
+@charset 'UTF-8';
+
+body{
+	background:#836FFF;
+}
+
+#bloco{
+	background: whitesmoke;
+	width: 350px;
+	height: 200px;
+	border: solid black 1px;
+}

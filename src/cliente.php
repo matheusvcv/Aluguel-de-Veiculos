@@ -19,4 +19,13 @@
 
 			$insereCliente-> execute();
 		}
+
+		public function exibeClientes(): array
+		{
+			$exibeClientes = $this->conexao->query("SELECT * FROM cadastro_clientes");
+
+			$clientes = $exibeClientes->fetch_all(MYSQLI_ASSOC);
+
+			return $clientes;
+		}
 	}

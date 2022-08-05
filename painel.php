@@ -19,7 +19,7 @@
  		<label><a href="admin/cadastro.php">Cadastrar um novo Cliente:</a></label>
  		</p>
  		<p>
- 			<label><a href="consulta.php">Consultar o banco de clientes</a></label>
+ 			<label><a href="admin/consulta.php">Consultar o banco de clientes</a></label>
  		</p>
 
 
