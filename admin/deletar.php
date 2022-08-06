@@ -16,7 +16,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" width="device-width initial-scale=1.0">
-	<title>Detala Cliente</title>
+	<title>Deletar Cadastro do Cliente</title>
 </head>
 <body>
 	<form action="deletar.php" method="POST">
