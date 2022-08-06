@@ -23,7 +23,7 @@
 
 		<div id="bloco">
 
-			<?php echo $cliente['nome'] . '<br>'; ?>
+			<p><?php echo $cliente['nome'] . '<br>'; ?>
 			<?php echo $cliente['cpf'] . '<br>'; ?>
 			<?php echo $cliente['nascimento'] . '<br>'; ?>
 			<?php echo $cliente['email'] . '<br>'; ?>
@@ -32,7 +32,9 @@
 			<?php echo $cliente['bairro'] . '<br>'; ?>
 			<?php echo $cliente['logradouro'] . '<br>'; ?>
 			<?php echo $cliente['numero'] . '<br>'; ?>
-			<?php echo $cliente['frequencia'] . '<br>'; ?>
+			<?php echo $cliente['frequencia'] . '<br>'; ?></p>
+
+			<a href="deletar.php?cpf=<?php echo $cliente['cpf']; ?>"><button>Excluir</button></a>
 
 		</div><br>
 

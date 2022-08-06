@@ -28,4 +28,13 @@
 
 			return $clientes;
 		}
+
+		public function deleta(string $cpf): void
+		{
+			$deleta = $this->conexao->prepare("DELETE FROM cadastro_clientes WHERE cpf=?");
+
+			$deleta->bind_param('s', $cpf);
+
+			$deleta->execute();
+		}
 	}
