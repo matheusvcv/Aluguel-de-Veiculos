@@ -1,6 +1,7 @@
 <?php 
 	require "../conexao.php";
 	require "../src/cliente.php";
+	require "../protect.php";
 
 	if($_SERVER['REQUEST_METHOD'] === 'POST'){
 

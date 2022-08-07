@@ -33,12 +33,18 @@
 			<?php echo $cliente['logradouro'] . '<br>'; ?>
 			<?php echo $cliente['numero'] . '<br>'; ?>
 			<?php echo $cliente['frequencia'] . '<br>'; ?></p>
-
+			<p>
 			<a href="deletar.php?cpf=<?php echo $cliente['cpf']; ?>"><button>Excluir</button></a>
+			<a href="altera.php?cpf=<?php echo $cliente['cpf']; ?>;"><button>Alterar</button></a>
+			</p>
 
 		</div><br>
 
 		<?php endforeach; ?>
+
+			<a href="../painel.php"><button>Voltar</button></a>
+	</body>
+</html>
 
 
 			

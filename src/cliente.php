@@ -29,6 +29,19 @@
 			return $clientes;
 		}
 
+		public function exibeIndividual(string $cpf): array
+		{
+			$exibeIndividual = $this->conexao->prepare("SELECT * FROM cadastro_clientes WHERE cpf=?");
+
+			$exibeIndividual-> bind_param('s', $cpf);
+
+			$exibeIndividual-> execute();
+
+			$individual = $exibeIndividual->get_result()->fetch_assoc();
+
+			return $individual;
+		}
+
 		public function deleta(string $cpf): void
 		{
 			$deleta = $this->conexao->prepare("DELETE FROM cadastro_clientes WHERE cpf=?");
@@ -36,5 +49,14 @@
 			$deleta->bind_param('s', $cpf);
 
 			$deleta->execute();
+		}
+
+		public function altera(string $nome, string $nascimento, string $email, string $telefone, string $cidade, string $bairro, string $logradouro, string $numero, string $frequencia, string $cpf): void
+		{
+			$altera =  $this->conexao->prepare("UPDATE cadastro_clientes SET nome=?, nascimento=?, email=?, telefone=?, cidade=?, bairro=?, logradouro=?, numero=?, frequencia=? WHERE cpf = ?");
+
+			$altera-> bind_param('ssssssssss', $nome, $nascimento, $email, $telefone, $cidade, $bairro, $logradouro, $numero, $frequencia, $cpf);
+
+			$altera->execute();
 		}
 	}
