@@ -23,7 +23,8 @@
 
 		<div id="bloco">
 
-			<p><?php echo $cliente['nome'] . '<br>'; ?>
+			<p>
+			<a href="cadastro_ind.php?cpf=<?php echo $cliente['cpf']; ?>"> <?php echo $cliente['nome'] . '<br>'; ?></a>
 			<?php echo $cliente['cpf'] . '<br>'; ?>
 			<?php echo $cliente['nascimento'] . '<br>'; ?>
 			<?php echo $cliente['email'] . '<br>'; ?>
@@ -35,7 +36,7 @@
 			<?php echo $cliente['frequencia'] . '<br>'; ?></p>
 			<p>
 			<a href="deletar.php?cpf=<?php echo $cliente['cpf']; ?>"><button>Excluir</button></a>
-			<a href="altera.php?cpf=<?php echo $cliente['cpf']; ?>;"><button>Alterar</button></a>
+			<a href="altera.php?cpf=<?php echo $cliente['cpf']; ?>"><button>Alterar</button></a>
 			</p>
 
 		</div><br>

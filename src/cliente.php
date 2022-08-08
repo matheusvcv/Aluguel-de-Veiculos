@@ -29,18 +29,16 @@
 			return $clientes;
 		}
 
+
 		public function exibeIndividual(string $cpf): array
 		{
-			$exibeIndividual = $this->conexao->prepare("SELECT * FROM cadastro_clientes WHERE cpf=?");
+			$exibirCliente = $this->conexao->query("SELECT * FROM cadastro_clientes WHERE cpf = $cpf");
 
-			$exibeIndividual-> bind_param('s', $cpf);
+			$exibir = $exibirCliente->fetch_assoc();
 
-			$exibeIndividual-> execute();
-
-			$individual = $exibeIndividual->get_result()->fetch_assoc();
-
-			return $individual;
+			return $exibir;
 		}
+
 
 		public function deleta(string $cpf): void
 		{

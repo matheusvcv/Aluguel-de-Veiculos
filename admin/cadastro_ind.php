@@ -1,7 +1,7 @@
 <?php
-	require "conexao.php";
-	require "src/cliente.php";
-	require "protect.php";
+	require "../conexao.php";
+	require "../src/cliente.php";
+	require "../protect.php";
 
 
 	$clientes = New Cliente($conexao);

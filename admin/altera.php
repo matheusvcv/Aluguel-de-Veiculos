@@ -6,13 +6,17 @@
 
 	if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
+
 		$alterarCadastro = New Cliente($conexao);
-		$altera-> $alteraCadastro-> altera($_POST['nome'], $_POST['nascimento'], $_POST['email'], $_POST['telefone'], $_POST['cidade'], $_POST['bairro'], $_POST['logradouro'], $_POST['numero'], $_POST['frequencia'], $_POST['cpf']);
+		$altera = $alterarCadastro-> altera($_POST['nome'], $_POST['nascimento'], $_POST['email'], $_POST['telefone'], $_POST['cidade'], $_POST['bairro'], $_POST['logradouro'], $_POST['numero'], $_POST['frequencia'], $_POST['cpf'],);
+
+		header('Location: consulta.php');
 
 	}
 
 	$clientes = New Cliente($conexao);
 	$cliente = $clientes-> exibeIndividual($_GET['cpf']);
+
 
 ?>
 <!DOCTYPE html>
@@ -25,10 +29,11 @@
 <body>
 	<h1>Dados dos Clientes</h1>
 
-		<form action="altera.php" method="POST">
+<form action="altera.php" method="POST">
+
 
 			<p>
-				<label>CPF: </label><input type="text" disabled=""> name="cpf" value="<?php echo $cliente['cpf']; ?>">
+				<label>CPF: </label><input type="text" name="cpf" value="<?php echo $cliente['cpf']; ?>">
 			</p>
 			<p>
 				<label>Nome: </label><input type="text" name="nome" value="<?php echo $cliente['nome']; ?>">
@@ -37,7 +42,7 @@
 				<label>Data de Nascimento: </label><input type="date" name="nascimento" value="<?php echo $cliente['nascimento']; ?>">
 			</p>
 			<p>
-				<label>E-mail: </label><input type="text" name="emial" value="<?php echo $cliente['email']; ?>">
+				<label>E-mail: </label><input type="text" name="email" value="<?php echo $cliente['email']; ?>">
 			</p>
 			<p>
 				<label>Telefone: </label><input type="text" name="telefone" value="<?php echo $cliente['telefone']; ?>">
@@ -55,10 +60,12 @@
 				<label>Número: </label><input type="text" name="numero" value="<?php echo $cliente['numero']; ?>">
 			</p>
 			<p>
-				<label>Frequência: </label><input type="text" name="frequencia" value="<?php echo $cliente['frenquencia']; ?>">
+				<label>Frequência: </label><input type="text" name="frequencia" value="<?php echo $cliente['frequencia']; ?>">
 			</p>
 
-			<input type="hidden" name="cpf" value="<?php $cliente['cpf'] ?>">
+			<input type="hidden" name="cpf" value="<?php echo $cliente['cpf']; ?>">
+
+			<input type="submit" value="Alterar">
 
 		</form>
 
