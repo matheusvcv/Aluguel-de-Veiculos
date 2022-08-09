@@ -6,13 +6,20 @@
 
 	$_SESSION['periodo'] = $_POST['periodo'];
 
+	$reservas = New Cliente($conexao);
+	$getCarro= $reservas->exibeCarros();
+
+	echo $getCarro['id'];
+
 	if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 		$locacao = New Cliente($conexao);
-		$locado = $locacao-> insereReserva($_SESSION['cliente'], $_SESSION['carro'], $_SESSION['horario_retirada'], $_SESSION['periodo'], $_SESSION['nome']);
+		$locado = $locacao-> insereReserva($_SESSION['cliente'], $_SESSION['carro'], $_SESSION['horario_retirada'], $_SESSION['periodo'], $_SESSION['nome'], $_SESSION['cpf'], );
 
 		header('Location: finalizado.php');
 	}
+
+
 
 ?>
 <!DOCTYPE html>
@@ -37,6 +44,9 @@
 			</p>
 			<p>
 				Vendedor Responsável: <?php echo $_SESSION['nome']; ?>
+			</p>
+			<p>
+				<?php echo $_SESSION['cpf'] ?>
 			</p>
 
 			<input type="submit" value="Finalizar">

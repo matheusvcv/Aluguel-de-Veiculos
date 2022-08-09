@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+body{
+	background-image: url(img/foto1.jpg);
+	background-color: whitesmoke;
+	font-family: Verdana, Helvetica, Arial;
+
+}
+
+h1{
+	text-align: center;
+}
+
+#container{
+	width: 80%;
+	background-color: white;
+	padding: 10px 40px;
+	margin: 0 auto;
+  	font-family: Verdana, Helvetica, Arial;
+  	border: solid 1px black;
+  	text-align: justify;
+
+}
+#faixa{
+	width: 80%;
+	background-color: whitesmoke;
+	padding: 10px 40px;
+	margin: 0 auto;
+	border: solid 1px black;
+	font-family: Verdana, Helvetica, Arial;
+}

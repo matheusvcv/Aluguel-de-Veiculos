@@ -20,11 +20,11 @@
 			$insereCliente-> execute();
 		}
 
-		public function insereReserva(string $cliente, string $carro, string $horario_retirada, string $periodo, string $usuario){
+		public function insereReserva(string $cliente, string $carro, string $horario_retirada, string $periodo, string $usuario, string $cpf_cliente, int $id_carro, int $id_usuario){
 
-			$insereReserva= $this->conexao->prepare("INSERT INTO reservas(cliente, carro, horario_retirada, periodo, usuario) VALUES(?,?,?,?,?)");
+			$insereReserva= $this->conexao->prepare("INSERT INTO reservas(cliente, carro, horario_retirada, periodo, usuario, cpf_cliente, id_carro, id_usuario) VALUES(?,?,?,?,?,?,?,?)");
 
-			$insereReserva-> bind_param('sssss', $cliente, $carro, $horario_retirada, $periodo, $usuario);
+			$insereReserva-> bind_param('ssssssii', $cliente, $carro, $horario_retirada, $periodo, $usuario, $cpf_cliente, $id_carro, $id_usuario);
 
 			$insereReserva-> execute();
 		}
@@ -65,6 +65,7 @@
 
 			$deleta->execute();
 		}
+
 
 		public function altera(string $nome, string $nascimento, string $email, string $telefone, string $cidade, string $bairro, string $logradouro, string $numero, string $frequencia, string $cpf): void
 		{

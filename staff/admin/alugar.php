@@ -7,6 +7,8 @@
 	$exibeClientes = New Cliente($conexao);
 	$clientes = $exibeClientes-> exibeClientes();
 
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -20,7 +22,7 @@
 	<p>Caso o cliente ainda não tenha cadastro, cadaste-o <a href="cadastro.php">clicando aqui</a></p>
 	
 	<?php foreach($clientes as $cliente): ?>
-	<form action="alugar1.php" method="POST">
+	<form action="alugar0.php" method="POST">
 		<div id="bloco">
 			<strong>Escolha aqui-></strong><input type="radio" name="cliente" value="<?php echo $cliente['nome'] . " " . $cliente['cpf']  . " " . $cliente['nascimento'] . " " . $cliente['email'] . " " . $cliente['telefone'] . " " . $cliente['cidade'] . " " . $cliente['bairro'] . " " . $cliente['logradouro'] . " " . $cliente['numero'] . " " . $cliente['frequencia']?>"><br>
 
@@ -35,15 +37,12 @@
 				<?php echo $cliente['numero'] . '<br>'; ?>
 				<?php echo $cliente['frequencia'] . '<br>'; ?></p>
 
+				<input type="hidden" name="cpf" value=<?php $cliente['cpf']; ?>>
+
 				<?php endforeach; ?>
 		</div><br>
 		<input type="submit" value="Continuar">
 
 	</form>
-
-
-
-
-
 </body>
 </html>

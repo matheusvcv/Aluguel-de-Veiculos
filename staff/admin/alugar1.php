@@ -4,7 +4,7 @@
 	require "../conexao.php";
 	require "../src/cliente.php";
 
-	$_SESSION['cliente'] = $_POST['cliente'];
+	$_SESSION['cpf'] = $_POST['cpf'];
 
 	$exibeCarros = New Cliente($conexao);
 	$carros = $exibeCarros-> exibeCarros();
