@@ -22,8 +22,7 @@
 	<?php foreach($clientes as $cliente): ?>
 	<form action="alugar1.php" method="POST">
 		<div id="bloco">
-
-				<strong>Escolha aqui-></strong><input type="radio" name="cliente" value="<?php echo $cliente['nome'] . " " . $cliente['cpf']; ?>"><br>
+			<strong>Escolha aqui-></strong><input type="radio" name="cliente" value="<?php echo $cliente['nome'] . " " . $cliente['cpf']  . " " . $cliente['nascimento'] . " " . $cliente['email'] . " " . $cliente['telefone'] . " " . $cliente['cidade'] . " " . $cliente['bairro'] . " " . $cliente['logradouro'] . " " . $cliente['numero'] . " " . $cliente['frequencia']?>"><br>
 
 				<?php echo $cliente['nome'] . '<br>'; ?>
 				<?php echo $cliente['cpf'] . '<br>'; ?>
@@ -38,7 +37,7 @@
 
 				<?php endforeach; ?>
 		</div><br>
-		<input type="submit" value="enviar">
+		<input type="submit" value="Continuar">
 
 	</form>
 

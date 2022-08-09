@@ -6,9 +6,6 @@
 
 	$_SESSION['carro'] = $_POST['carro'];
 
-	echo $_SESSION['cliente'] . "<br>";
-	echo $_SESSION['carro'] . "<br>";
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,10 +14,12 @@
 	<title></title>
 </head>
 <body>
+	<form action="alugar3.php" method="POST">
+		<h1>Agora escolha a data e o horário em que você deseja retirar o veículo na loja:</h1>
 
-		<input type="submit" value="Continuar">
+		<input type="datetime-local" name="horario_retirada">
+		
+		<input type="submit" value="Continuar">	
 	</form>
-
-
 </body>
 </html>

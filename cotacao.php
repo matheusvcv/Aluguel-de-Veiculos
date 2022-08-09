@@ -29,7 +29,7 @@
 		</p>
 		<p>
 		<label><strong>Por quanto tempo você gostaria de Locar o Veículo?</strong></label>
-			<select name="local_retirada">
+			<select name="periodo">
 				<option value="Não Definiu">Escolha uma opção:</option>
 				<option value="um_dia">01 Dia</option>
 				<option value="tres_dias">03 Dias</option>
