@@ -69,5 +69,6 @@
 
 		</form>
 
+		<br><a href="../painel.php"><button>Voltar</button></a>
 </body>
 </html>

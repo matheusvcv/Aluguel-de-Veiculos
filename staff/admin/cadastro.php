@@ -65,5 +65,6 @@
 			</p>
 			<input type="submit" value="Cadastrar">
 		</form>
+		<br><a href="../painel.php"><button>Voltar</button></a>
 	</body>
 </html>

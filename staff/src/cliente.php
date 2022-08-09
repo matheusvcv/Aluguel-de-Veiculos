@@ -28,7 +28,15 @@
 
 			return $clientes;
 		}
+		
+		public function exibeCarros(): array
+		{
+			$exibeClientes = $this->conexao->query("SELECT * FROM carros");
 
+			$clientes = $exibeClientes->fetch_all(MYSQLI_ASSOC);
+
+			return $clientes;
+		}
 
 		public function exibeIndividual(string $cpf): array
 		{

@@ -1,68 +1,26 @@
-<?php
-	include 'conexao.php';
-
-	if(isset($_POST['email']) || isset($_POST['senha'])){
-
-		if(strlen($_POST['email']) == 0){
-
-			echo "Por favor, o campo corretamente com seu e-mail";
-
-		} else if(strlen($_POST['senha']) == 0){
-
-			echo "Por favor, o campo corretamente com sua senha.";
-
-		}else{
-
-			$email = $conexao-> real_escape_string($_POST['email']);
-			$senha = $conexao-> real_escape_string($_POST['senha']);
-
-			$codigo_consulta = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'";
-			$sql_consulta = $conexao->query($codigo_consulta) or die('Falha na execução do código SQL!');
-
-			$quantidade = $sql_consulta->num_rows;
-
-			if($quantidade === 1){
-
-				$usuario = $sql_consulta-> fetch_assoc();
-
-				if(!isset($_SESSION)){
-
-					session_start();
-				}
-
-				$_SESSION['id'] = $usuario['id'];
-				$_SESSION['nome'] = $usuario['nome'];
-
-				header("Location: painel.php");
-
-			}else{
-
-				echo "Falha ao logar! E-mail ou senha incorretos!";
-			}
-
-		}
-	}
-?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" width="device-width initial-scale=1.0">
-	<title>Login</title>
+	<title>Aluguel Veículos</title>
 </head>
 <body>
-	<form action="" method="POST">
+	<p>Se você faz parte do staff, <a href="staff/index.php">clique aqui!</a></p>
+	<h1>Aluguel de Carros</h1>
+	<p>Nada melhor do que um carro, para prossibilitar uma locomoção autonoma, confortável e segura. Para isso, você pode contar com o nosso sitema de aluguéis.</p>
+
+	<h2>Categorias disponíveis para locação:</h2>
 		<p>
-			<label>E-Mail:</label>
-			<input type="text" name="email">
+			Contamos com 12 veículos, divididos em 04 categorias. Com certeza, alguma delas irá se adequar perfeitamente no seu estilo de viagem e direção. Nós nos adequamos para deixar o seu aluguel totalmente personalizado. É possível encontrar modelos hatch, sedan e SUVs.
 		</p>
+	<h2>Qual o valor médio do aluguel de carros?</h2>
 		<p>
-			<label>Senha:</label>
-			<input type="password" name="senha">
+			O valor do aluguel, varia de acordo com o grupo escolhido, e com o tempo desejado. Locações por períodos maiores são mais baratas em relação a locações por períodos mais curtos.
 		</p>
+	<h2>Como faço para reservar um carro?</h2>
 		<p>
-			<button type="submit">Entrar</button>
+			Para fazer uma cotação de reserva, por favor <a href="cotacao.php">clique aqui</a>.
 		</p>
-	</form>
+
 </body>
 </html>
