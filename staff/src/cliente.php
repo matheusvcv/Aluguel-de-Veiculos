@@ -20,6 +20,15 @@
 			$insereCliente-> execute();
 		}
 
+		public function insereReserva(string $cliente, string $carro, string $horario_retirada, string $periodo, string $usuario){
+
+			$insereReserva= $this->conexao->prepare("INSERT INTO reservas(cliente, carro, horario_retirada, periodo, usuario) VALUES(?,?,?,?,?)");
+
+			$insereReserva-> bind_param('sssss', $cliente, $carro, $horario_retirada, $periodo, $usuario);
+
+			$insereReserva-> execute();
+		}
+
 		public function exibeClientes(): array
 		{
 			$exibeClientes = $this->conexao->query("SELECT * FROM cadastro_clientes");

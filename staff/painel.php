@@ -21,7 +21,9 @@
  		<p>
  			<label><a href="admin/consulta.php">Consultar o banco de clientes</a></label>
  		</p>
-
+ 		<p>
+ 			<label><a href="admin/alugar.php">Realizar uma Locação</a></label>
+ 		</p>
 
 </body>
 </html>
