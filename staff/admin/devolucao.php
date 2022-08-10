@@ -24,32 +24,41 @@
 	<link rel="stylesheet" type="text/css" href="../../style.css">
 </head>
 <body>
-		<h1>Devolução de veículo:</h1>
+		<div id="faixa">
+			<h1>Devolução de veículo:</h1>
+		</div>
+			<div id="container">
+			<p>Qual carro está sendo devolvido?</p>
 
-		<p>Qual carro está sendo devolvido?</p>
+			<form method="POST" action="">
 
-		<form method="POST" action="">
-			<?php foreach($carros as $carro): if($carro['status'] == 1){  ?>
+					<?php foreach($carros as $carro): if($carro['status'] == 1){  ?>
+				<div id="faixa1">			
+						<p>Escolha aqui: <input type="radio" name="id_carro" value="<?php echo $carro['id']; ?>"></p>
+				</div>
+				<div id="bloco">
+							<p>
+								<strong>Carro</strong> <?php echo $carro['nome']; ?><br>
 
-				<p>Escolha aqui: <input type="radio" name="id_carro" value="<?php echo $carro['id']; ?>"></p>
-					<p>
-						<strong>Carro</strong> <?php echo $carro['nome']; ?><br>
+								<strong>Grupo</strong> <?php echo $carro['grupo']; ?><br>	
 
-						<strong>Grupo</strong> <?php echo $carro['grupo']; ?><br>	
+								<strong>Placa</strong> <?php echo $carro['placa']; ?><br>	
 
-						<strong>Placa</strong> <?php echo $carro['placa']; ?><br>	
+								<strong>id</strong> <?php echo $carro['id']; ?><br>
 
-						<strong>id</strong> <?php echo $carro['id']; ?><br>
-
-						<input type="hidden" name="<?php echo $carro['id']; ?>">
-					</p>
-
-			<?php } endforeach; ?>
-
-			<input type="submit" value="Finalizar">
-			<a href="../painel.php">
-
-		</form>
-		<button>Voltar</button></a>
+								<input type="hidden" name="<?php echo $carro['id']; ?>">
+							</p>
+				
+						<?php } endforeach; ?>
+				</div><br>
+				
+				<div id="logo">
+					<input type="submit" value="Finalizar">
+				</div>
+			</div><br>
+			</form>
+			<div id="logo">
+				<a href="../painel.php"><button>Voltar</button></a>
+		</div>
 	</body>
 </html>

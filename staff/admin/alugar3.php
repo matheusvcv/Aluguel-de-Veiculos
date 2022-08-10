@@ -10,11 +10,16 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title></title>
+	<title>Locação de Veículo</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css">
 </head>
 <body>
 	<form action="alugar4.php" method="POST">
-		<h1>Agora escolha o tempo de locação desejado:</h1>
+		<div id="faixa">
+			<h1>Tempo de Locação desejado:</h1>
+		</div>
+		<div id="container">
+			<p>Agora escolha o tempo de locação desejado:</p>
 			<select name="periodo">
 				<option value="Não Definiu">Escolha uma opção:</option>
 				<option value="um_dia">01 Dia</option>
@@ -23,8 +28,10 @@
 				<option value="duas_semanas">02 Semanas</option>
 				<option value="um_mes">01 mês</option>
 			</select><br>
-		
-		<br><input type="submit" value="Continuar">	
+		</div>
+		<div id="logo">
+			<br><input type="submit" value="Continuar">
+		</div>
 	</form>
 </body>
 </html>

@@ -11,15 +11,21 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title></title>
+	<title>Aluguel Veículo</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css">
 </head>
 <body>
 	<form action="alugar3.php" method="POST">
-		<h1>Agora escolha a data e o horário em que você deseja retirar o veículo na loja:</h1>
-
-		<input type="datetime-local" name="horario_retirada">
-		
-		<input type="submit" value="Continuar">	
+		<div id="faixa">
+			<h1>Data de Retirada:</h1>
+		</div>
+		<div id="container">
+			<p>Agora escolha a data e o horário em que você deseja retirar o veículo na loja:</p>
+			<p><input type="datetime-local" name="horario_retirada"></p>
+		</div><br>
+		<div id="logo">
+			<input type="submit" value="Continuar">	
+		</div>
 	</form>
 </body>
 </html>
