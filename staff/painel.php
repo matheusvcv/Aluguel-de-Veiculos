@@ -28,6 +28,9 @@
  		<p>
  			<label><a href="admin/alugar.php">Realizar uma Locação</a></label>
  		</p>
+ 		<p>
+ 			<label><a href="admin/devolucao.php">Receber uma devolução de carro locado.</a></label>
+ 		</p>
  	</div>
 </body>
 </html>

@@ -13,9 +13,6 @@
 
 		header('Location: finalizado.php');
 	}
-
-
-
 ?>
 <!DOCTYPE html>
 <html>

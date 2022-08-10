@@ -57,6 +57,15 @@
 			$deleta->execute();
 		}
 
+		public function deletaReserva(int $id_carro): void
+		{
+			$deletaReserva = $this->conexao->prepare("DELETE FROM reservas WHERE id_carro = $id_carro");
+			$deletaReserva-> execute();
+
+			$altera = $this->conexao->prepare("UPDATE carros SET status=0 WHERE id = $id_carro");
+			$altera->execute();
+		}
+
 
 		public function altera(string $nome, string $nascimento, string $email, string $telefone, string $cidade, string $bairro, string $logradouro, string $numero, string $frequencia, string $cpf): void
 		{
