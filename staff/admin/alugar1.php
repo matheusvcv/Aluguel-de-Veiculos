@@ -18,19 +18,28 @@
 <body>
 	<h1>Agora escolha o veículo:</h1>
 
-	<?php foreach($carros as $carro): ?>
+	<?php 
+		
+
+		foreach($carros as $carro): if($carro['status'] == 0) {?>
 
 	<form action="alugar2.php" method="POST">
 		<div id="bloco">
 
 				<br><strong>Escolha aqui-></strong><input type="radio" name="carro" value="<?php echo $carro['id'];?>"><br>
 
-				<strong>Carro</strong> <?php echo $carro['nome'] . '<br>'; ?>
-				<strong>Grupo</strong> <?php echo $carro['grupo'] . '<br>'; ?>
-				<strong>Placa</strong> <?php echo $carro['placa'] . '<br>'; ?>
-				<strong>id</strong> <?php echo $carro['id'] . '<br>'; ?><br>
+				<p>
+					<strong>Carro</strong> <?php echo $carro['nome']; ?><br>
+
+					<strong>Grupo</strong> <?php echo $carro['grupo']; ?><br>	
+
+					<strong>Placa</strong> <?php echo $carro['placa']; ?><br>	
+
+					<strong>id</strong> <?php echo $carro['id']; ?><br>
+				</p>
 		</div>
-	<?php endforeach; ?>
+
+	<?php } endforeach; ?>
 
 		<input type="submit" value="Continuar">
 	</form>
@@ -38,3 +47,4 @@
 
 </body>
 </html>
+

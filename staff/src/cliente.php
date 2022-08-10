@@ -20,17 +20,6 @@
 			$insereCliente-> execute();
 		}
 
-		public function insereReserva(string $cliente, string $cpf_cliente, int $carro, string $horario_retirada, string $periodo, int $id_usuario){
-
-			$insereReserva= $this->conexao->prepare("INSERT INTO reservas(cliente, cpf_cliente, id_carro, horario_retirada, periodo, id_usuario) VALUES(?,?,?,?,?,?)");
-
-			$insereReserva-> bind_param('ssissi', $cliente, $cpf_cliente, $carro, $horario_retirada, $periodo, $id_usuario);
-
-			$insereReserva-> execute();
-
-			$atualiza = $this->conexao("UPDATE reservas");
-		}
-
 		public function exibeClientes(): array
 		{
 			$exibeClientes = $this->conexao->query("SELECT * FROM cadastro_clientes");
@@ -76,5 +65,18 @@
 			$altera-> bind_param('ssssssssss', $nome, $nascimento, $email, $telefone, $cidade, $bairro, $logradouro, $numero, $frequencia, $cpf);
 
 			$altera->execute();
+		}
+
+
+		public function insereReserva(string $cliente, string $cpf_cliente, int $carro, string $horario_retirada, string $periodo, int $id_usuario){
+
+			$insereReserva= $this->conexao->prepare("INSERT INTO reservas(cliente, cpf_cliente, id_carro, horario_retirada, periodo, id_usuario) VALUES(?,?,?,?,?,?)");
+
+			$insereReserva-> bind_param('ssissi', $cliente, $cpf_cliente, $carro, $horario_retirada, $periodo, $id_usuario);
+
+			$insereReserva-> execute();
+
+			$atualiza = $this->conexao->prepare("UPDATE carros SET status=1 WHERE  id = $carro");
+			$atualiza-> execute();
 		}
 	}
