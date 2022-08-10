@@ -23,11 +23,12 @@
 	<form action="alugar2.php" method="POST">
 		<div id="bloco">
 
-				<br><strong>Escolha aqui-></strong><input type="radio" name="carro" value="<?php echo $carro['nome'] . " " . $carro['placa'];?>"><br>
+				<br><strong>Escolha aqui-></strong><input type="radio" name="carro" value="<?php echo $carro['id'];?>"><br>
 
 				<strong>Carro</strong> <?php echo $carro['nome'] . '<br>'; ?>
 				<strong>Grupo</strong> <?php echo $carro['grupo'] . '<br>'; ?>
-				<strong>Placa</strong> <?php echo $carro['placa'] . '<br>'; ?><br>
+				<strong>Placa</strong> <?php echo $carro['placa'] . '<br>'; ?>
+				<strong>id</strong> <?php echo $carro['id'] . '<br>'; ?><br>
 		</div>
 	<?php endforeach; ?>
 

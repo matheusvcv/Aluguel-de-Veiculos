@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 body{
-
+	background-image: url(img/foto.jpg);
 	background-color: whitesmoke;
 	font-family: Verdana, Helvetica, Arial;
 
