@@ -27,12 +27,13 @@
 		<div id="faixa">
 			<h1>Devolução de veículo:</h1>
 		</div>
-			<div id="container">
-			<p>Qual carro está sendo devolvido?</p>
+		<div id="container">
+			<?php foreach($carros as $carro): if($carro['status'] == 1){  ?>
+			
 
 			<form method="POST" action="">
 
-					<?php foreach($carros as $carro): if($carro['status'] == 1){  ?>
+
 				<div id="faixa1">			
 						<p>Escolha aqui: <input type="radio" name="id_carro" value="<?php echo $carro['id']; ?>"></p>
 				</div>
@@ -47,10 +48,10 @@
 								<strong>id</strong> <?php echo $carro['id']; ?><br>
 
 								<input type="hidden" name="<?php echo $carro['id']; ?>">
-							</p>
-				
-						<?php } endforeach; ?>
+							</p><br>
 				</div><br>
+
+				<?php } endforeach; ?>
 				
 				<div id="logo">
 					<input type="submit" value="Finalizar">

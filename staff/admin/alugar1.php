@@ -22,8 +22,7 @@
 	</div>
 	<div id="container">
 	<h2>Carros disponíveis para locação:</h2>
-		<?php 
-			foreach($carros as $carro): if($carro['status'] == 0) {?>
+		<?php foreach($carros as $carro): if($carro['status'] == 0){ ?>
 
 		<form action="alugar2.php" method="POST">
 			<div id="faixa1">
