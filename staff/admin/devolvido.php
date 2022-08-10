@@ -15,13 +15,11 @@
 	<body>
 <body>
 	<div id="faixa">
-		<h1>Locação realizada com sucesso.</h1>
+		<h1>Veículo Devolvido Com Sucesso.</h1>
 	</div>
 	<div id="container">
-		<p>Confirmado em sistema que o usuario <?php echo $_SESSION['nome'] ?> efetuou a locação do veículo selecionado para o cliente  <?php echo $_SESSION['cliente']; ?>, pelo período de  <?php echo $_SESSION['periodo'] ?>.</p>
+		<p>Confirmado em sistema que o cliente <?php echo $_SESSION['cliente']; ?> efetuou a devolução do veículo para o colaborador <?php echo $_SESSION['nome'] ?>.</p>
 		<p><a href="../painel.php"><button>Voltar</button></a></p>
 	</div>
 </body>
 </html>
-
-

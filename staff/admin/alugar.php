@@ -26,7 +26,7 @@
 		<?php foreach($clientes as $cliente): ?>
 		<form action="alugar0.php" method="POST">
 			<div id="faixa1">
-				<strong>Escolha aqui: </strong><input type="radio" name="cliente" value="<?php echo $cliente['nome'] . " " . $cliente['cpf']  . " " . $cliente['nascimento'] . " " . $cliente['email'] . " " . $cliente['telefone'] . " " . $cliente['cidade'] . " " . $cliente['bairro'] . " " . $cliente['logradouro'] . " " . $cliente['numero'] . " " . $cliente['frequencia']?>"><br>
+				<strong>Escolha aqui: </strong><input type="radio" name="cliente" value="<?php echo $cliente['nome']; ?>"><br>
 			</div>
 			<div id="bloco">
 					<br><strong>Nome:</strong> <a href="cadastro_ind.php?cpf=<?php echo $cliente['cpf']; ?>"> <?php echo $cliente['nome']; ?><br></a>

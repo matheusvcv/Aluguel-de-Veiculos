@@ -9,7 +9,7 @@
 		$devolucao_veiculo = New Cliente($conexao);
 		$devolucao = $devolucao_veiculo-> deletaReserva($_POST['id_carro']);
 
-		header("Location: finalizado.php");
+		header("Location: devolvido.php");
 	}
 
 	$carros_locado = New Cliente($conexao);
