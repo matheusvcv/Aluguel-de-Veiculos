@@ -12,10 +12,13 @@
 <head>
 	<meta charset="utf-8">
 	<title></title>
+	<link rel="stylesheet" type="text/css" href="../../style.css">
 </head>
 <body>
-	<h1>Cliente Selecionado:</h1>
-
+	<div id="faixa">
+		<h1>Cliente Selecionado:</h1>
+	</div>
+	<div id="container">
 		<p>
 			<strong>CPF do Cliente:</strong> <?php echo $cliente['cpf']; ?> 
 		</p>
@@ -53,5 +56,6 @@
 		</p>
 			
 		<p><a href="../painel.php"><button>Voltar</button></a></p>
+	</div>
 </body>
 </html>

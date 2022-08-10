@@ -8,11 +8,15 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" width="device-width initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../style.css">
 	<title>Aluguel de veículos</title>
 </head>
 <body>
  <a href="logout.php">Sair</a>
- 	<h1>Aluguel de veículos</h1>
+ 	<div id="faixa">
+ 		<h1>Aluguel de veículos</h1>
+ 	</div>
+ 	<div id="container">
  		<?php echo "Seja bem vindo, colaborador " . strtoupper($_SESSION['nome']) . " o que deseja fazer?"; ?>
  		
  		<p>
@@ -24,7 +28,7 @@
  		<p>
  			<label><a href="admin/alugar.php">Realizar uma Locação</a></label>
  		</p>
-
+ 	</div>
 </body>
 </html>
 

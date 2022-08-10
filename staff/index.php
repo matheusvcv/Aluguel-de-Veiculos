@@ -48,22 +48,28 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" width="device-width initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../style.css">
 	<title>Login</title>
 </head>
 <body>
-	<form action="" method="POST">
-		<p>
-			<label>E-Mail:</label>
-			<input type="text" name="email">
-		</p>
-		<p>
-			<label>Senha:</label>
-			<input type="password" name="senha">
-		</p>
-		<p>
+	<div id="faixa">
+		<h1>Login de Usuário</h1>
+	</div>
+	<div id="login">
+		<form action="" method="POST">
+			<p>
+				<label>E-Mail:</label>
+				<input type="text" name="email">
+			</p>
+			<p>
+				<label>Senha:</label>
+				<input type="password" name="senha">
+			</p>
+			<p>
 			<button type="submit">Entrar</button>
-		</p>
-	</form>
+			</p>
+		</form>
+	</div>
 	<p>Se você é um cliente, <a href="../index.php">clique aqui!</a></p>
 </body>
 </html>

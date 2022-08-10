@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
 body{
-	background-image: url(img/foto.jpg);
-	background-color: whitesmoke;
+	background-color: #FFFFF0;
 	font-family: Verdana, Helvetica, Arial;
+
 
 }
 
@@ -12,7 +12,7 @@ h1{
 }
 
 #container{
-	width: 80%;
+	width: 90%;
 	background-color: white;
 	padding: 10px 40px;
 	margin: 0 auto;
@@ -20,12 +20,49 @@ h1{
   	border: solid 1px black;
   	text-align: justify;
 
+
 }
+#login{
+	width: 90%;
+	background-color: white;
+	padding: 10px 40px;
+	margin: 0 auto;
+  	font-family: Verdana, Helvetica, Arial;
+  	border: solid 1px black;
+  	text-align: center;
+
+
+}
+
 #faixa{
-	width: 80%;
-	background-color: whitesmoke;
+	width: 90%;
+	background-color: #2E8B57;
 	padding: 10px 40px;
 	margin: 0 auto;
 	border: solid 1px black;
 	font-family: Verdana, Helvetica, Arial;
+	color: white;
+}
+
+#faixa1{
+	width: 350px;
+	background-color: #2E8B57;
+	padding: 10px 40px;
+	margin: 0 auto;
+	border: solid 1px black;
+	font-family: Verdana, Helvetica, Arial;
+	color: white;
+}
+
+#logo{
+	text-align: center;
+}
+
+#bloco{
+	background: whitesmoke;
+	width: 350px;
+	height: 245px;
+	border: solid black 1px;
+	margin: 0 auto;
+	padding: 10px 40px;
 }

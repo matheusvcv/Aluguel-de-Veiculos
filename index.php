@@ -26,6 +26,9 @@
 			<p>
 				Para fazer uma cotação de reserva, por favor <a href="cotacao.php">clique aqui</a>.
 			</p>
+	<div id="logo">
+			<img src="img/cosvib.png">	
+	</div>
 	</div>
 </body>
 </html>
