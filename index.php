@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Aluguel Veículos</title>
+	<link rel="shortcut icon" href="img/icon.png" type="icon/x-image">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
