@@ -17,20 +17,28 @@
  		<h1>Aluguel de veículos</h1>
  	</div>
  	<div id="container">
- 		<?php echo "Seja bem vindo, colaborador " . strtoupper($_SESSION['nome']) . " o que deseja fazer?"; ?>
+ 		<?php echo "Seja bem vindo, colaborador " . strtoupper($_SESSION['nome']) . " o que deseja fazer?"; ?><br>
  		
- 		<p>
- 		<label><a href="admin/cadastro.php">Cadastrar um novo Cliente:</a></label>
- 		</p>
- 		<p>
- 			<label><a href="admin/consulta.php">Consultar o banco de clientes</a></label>
- 		</p>
- 		<p>
- 			<label><a href="admin/alugar.php">Realizar uma Locação</a></label>
- 		</p>
- 		<p>
- 			<label><a href="admin/devolucao.php">Receber uma devolução de carro locado.</a></label>
- 		</p>
+ 		<br><div id="item">
+	 		<p>
+	 		<label><a href="admin/cadastro.php" style="color: white;">Cadastrar um novo Cliente:</a></label>
+	 		</p><
+ 		</div><br>
+ 		<div id="item">
+	 		<p>
+	 			<label><a href="admin/consulta.php" style="color: white;">Consultar o banco de clientes</a></label>
+	 		</p>
+	 	</div><br>
+	 	<div id="item">
+	 		<p>
+	 			<label><a href="admin/alugar.php" style="color: white;">Realizar uma Locação</a></label>
+	 		</p>
+ 		</div><br>
+ 		<div id="item">
+	 		<p>
+	 			<label><a href="admin/devolucao.php" style="color: white;">Receber devolução locação.</a></label>
+	 		</p>
+ 		</div>
  	</div>
 </body>
 </html>

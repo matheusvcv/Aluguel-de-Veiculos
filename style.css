@@ -66,3 +66,12 @@ h1{
 	margin: 0 auto;
 	padding: 10px 40px;
 }
+
+#item{
+	background: #2E8B57;
+	color: white;
+	width: 240px;
+	height: 50px;
+	border: solid black 1px;
+	padding: 05px 20px;
+}
