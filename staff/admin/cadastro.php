@@ -8,7 +8,8 @@
 		$inserir = New Cliente($conexao);
 		$inserir-> insereCliente($_POST['nome'], $_POST['cpf'], $_POST['nascimento'], $_POST['email'], $_POST['telefone'], $_POST['cidade'], $_POST['bairro'], $_POST['logradouro'], $_POST['numero'], $_POST['frequencia']);
 
-		header("Location: consulta.php");
+			header("Location: consulta.php");
+
 	}
 ?>
 <!DOCTYPE html>
