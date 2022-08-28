@@ -11,34 +11,36 @@
 	<title>Aluguel de veículos</title>
 </head>
 <body>
- <a href="logout.php">Sair</a>
+ 	<br>
  	<div id="faixa">
+ 		<div id="sair">
+ 			<a href="logout.php"><button id="botao">Sair</button></a>
+ 		</div>
  		<h1>Aluguel de veículos</h1>
  	</div>
  	<div id="container">
- 		<?php echo "Seja bem vindo, colaborador " . strtoupper($_SESSION['nome']) . " o que deseja fazer?"; ?><br>
+ 		<?php echo "Seja bem vindo, colaborador <strong>" . strtoupper($_SESSION['nome']) . "</strong> o que deseja fazer?"; ?><br>
  		
- 		<br><div id="item">
+ 		<br>
+
+ 		<div id="logo">
+
 	 		<p>
-	 		<label><a href="admin/cadastro.php" style="color: white;">Cadastrar um novo Cliente:</a></label>
-	 		</p><
- 		</div><br>
- 		<div id="item">
-	 		<p>
-	 			<label><a href="admin/consulta.php" style="color: white;">Consultar o banco de clientes</a></label>
+
+	 			<a href="admin/cadastro.php"><button class="botaoMaior">Cadastrar um novo Cliente</button></a>
+
+	 			<a href="admin/consulta.php"><button class="botaoMaior">Consultar Clientes</button></a>
+
 	 		</p>
-	 	</div><br>
-	 	<div id="item">
+
 	 		<p>
-	 			<label><a href="admin/alugar.php" style="color: white;">Realizar uma Locação</a></label>
+	 			<a href="admin/alugar.php"><button class="botaoMaior">Realizar uma Locação</button></a>
+
+	 			<a href="admin/devolucao.php"><button class="botaoMaior">Devolução locação</button></a>
+
 	 		</p>
- 		</div><br>
- 		<div id="item">
-	 		<p>
-	 			<label><a href="admin/devolucao.php" style="color: white;">Receber devolução locação.</a></label>
-	 		</p>
+
  		</div>
- 	</div>
 </body>
 </html>
 

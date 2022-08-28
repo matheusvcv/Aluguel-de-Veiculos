@@ -17,7 +17,7 @@
 <body>
 		<form action="alugar1.php" method="POST">
 			<div id="faixa">
-				<p>Por questão de segurança, confirme o CPF do cliente cadastrado:</p>
+				<p style="color: white;">Por questão de segurança, confirme o CPF do cliente cadastrado:</p>
 			</div>
 				<div id="container">
 				<p>

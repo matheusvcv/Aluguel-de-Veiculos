@@ -49,9 +49,13 @@
 	<meta charset="utf-8">
 	<meta name="viewport" width="device-width initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../style.css">
+	<link rel="shortcut icon" href="../img/icons.png" type="icon/x-image">
 	<title>Login</title>
 </head>
 <body>
+	<div id="logo">
+			<img src="../img/icons.png">
+		</div>
 	<br><div id="faixa">
 		<h1>Login de Usuário</h1>
 	</div>
@@ -70,6 +74,8 @@
 			</p>
 		</form>
 	</div>
-	<p>Se você é um cliente, <a href="../index.php">clique aqui!</a></p>
+	<div id="logo">
+		<p>Se você é um cliente, <a href="../index.php"><button class="botao">clique aqui!</button></a></p>
+	</div>
 </body>
 </html>

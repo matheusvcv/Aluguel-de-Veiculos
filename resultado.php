@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Cotação</title>
-	<link rel="shortcut icon" href="img/icon.png" type="icon/x-image">
+	<link rel="shortcut icon" href="img/icons.png" type="icon/x-image">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -23,7 +23,11 @@
 
 			<?php
 
-				if($_POST['grupo'] === 'A'){
+				if($_POST['grupo'] === null){
+
+					echo "Nenhum Grupo de veículos foi definido";
+
+				} else if($_POST['grupo'] === 'A'){
 
 					$preco = 100;
 
@@ -88,32 +92,7 @@
 
 				}
 
-
-
 			?>
-
-
-
-		<!-- 
-
-				<select name="periodo">
-					<option value="Não Definiu">Escolha uma opção:</option>
-					<option value="um_dia">01 Dia</option>
-					<option value="tres_dias">03 Dias</option>
-					<option value="uma_semana">01 Semana</option>
-					<option value="duas_semanas">02 Semanas</option>
-					<option value="um_mes">01 mês</option>
-				</select>
-
-
-
-
-
-		<p><strong>Tipos de carro:</strong></p>
-		<p>Tipo A = R$ 100,00 por Diária</p>
-		<p>Tipo B = R$ 150,00 por Diária</p>
-		<p>Tipo C = R$ 200,00 por Diária</p> -->
-
 
 			<div id="logo">
 				<p>
