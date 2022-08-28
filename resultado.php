@@ -19,25 +19,75 @@
 
 		<h2>Informações de valores:</h2>
 
+		<p>
+
 			<?php
 
 				if($_POST['grupo'] === 'A'){
+
+					$preco = 100;
 
 					echo "Você escolheu um carro do <strong> Grupo " . $_POST['grupo'] . "</strong>. Carros deste grupo custam <strong>R$ 100,00</strong> por diária.";
 
 				} else if($_POST['grupo'] === 'B') {
 
+					$preco = 150;
+
 					echo "Você escolheu um carro do <strong> Grupo " . $_POST['grupo'] . "</strong>. Carros deste grupo custam <strong>R$ 150,00</strong> por diária.";
 
 				} else if ($_POST['grupo'] === 'C'){
 
+					$preco = 200;
+
 					echo "Você escolheu um carro do <strong> Grupo " . $_POST['grupo'] . "</strong>. Carros deste grupo custam <strong>R$ 200,00</strong> por diária.";
 				}
 
+			?>
+		</p>
 
-				if($_POST['periodo']){
+			<?php
+
+				if($_POST['periodo'] === 'Não Definiu'){
+
+					echo "Nenhum período de locação foi definido!";
+
+
+				} else if($_POST['periodo'] === 'um_dia'){
+
+					$valorTotal = $preco * 1;
+
+					echo "Sendo assim, o valor total pelo período de " . $_POST['periodo'] . " é <strong> R$ " . $valorTotal . ",00 </strong>.";
+
+
+				} else if($_POST['periodo'] === 'tres_dias'){
+
+					$valorTotal = $preco * 3;
+
+					echo "Sendo assim, o valor total pelo período de " . $_POST['periodo'] . " é <strong> R$ " . $valorTotal . ",00 </strong>.";
+
+
+				} else if($_POST['periodo'] === 'uma_semana'){
+
+					$valorTotal = $preco * 7;
+
+					echo "Sendo assim, o valor total pelo período de " . $_POST['periodo'] . " é <strong> R$ " . $valorTotal . ",00 </strong>.";
+
+
+				} else if($_POST['periodo'] === 'duas_semanas'){
+
+					$valorTotal = $preco * 15;
+
+					echo "Sendo assim, o valor total pelo período de " . $_POST['periodo'] . " é <strong> R$ " . $valorTotal . ",00 </strong>.";
+
+
+				} else if($_POST['periodo'] === 'um_mes'){
+
+					$valorTotal = $preco * 30;
+
+					echo "Sendo assim, o valor total pelo período de " . $_POST['periodo'] . " é <strong> R$ " . $valorTotal . ",00 </strong>.";
 
 				}
+
 
 
 			?>
@@ -46,7 +96,14 @@
 
 		<!-- 
 
-
+				<select name="periodo">
+					<option value="Não Definiu">Escolha uma opção:</option>
+					<option value="um_dia">01 Dia</option>
+					<option value="tres_dias">03 Dias</option>
+					<option value="uma_semana">01 Semana</option>
+					<option value="duas_semanas">02 Semanas</option>
+					<option value="um_mes">01 mês</option>
+				</select>
 
 
 
