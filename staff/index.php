@@ -52,18 +52,18 @@
 	<title>Login</title>
 </head>
 <body>
-	<div id="faixa">
+	<br><div id="faixa">
 		<h1>Login de Usuário</h1>
 	</div>
 	<div id="login">
 		<form action="" method="POST">
-			<p>
-				<label>E-Mail:</label>
-				<input type="text" name="email">
+			<br><p>
+				<strong><label>E-Mail de Usuário:</label></strong><br>
+				<br><input type="text" name="email">
 			</p>
 			<p>
-				<label>Senha:</label>
-				<input type="password" name="senha">
+				<strong><label>Senha:</label></strong><br>
+				<br><input type="password" name="senha">
 			</p>
 			<p>
 			<button type="submit">Entrar</button>
