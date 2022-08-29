@@ -50,9 +50,7 @@
 
 		<?php foreach($carros as $carro): if($carro['status'] == 1){ ?>
 
-			<p>
-				
-	 			<button class="botaoCarro">
+	 			<button class="botaoCarro" style="background-color: #696969;">
 
 					Carro <strong><?php echo $carro['nome']; ?></strong><br>
 
@@ -60,60 +58,11 @@
 
 					Placa <strong><?php echo $carro['placa']; ?></strong><br>	
 
-
 	 			</button>
 
 			</form>
 
-		</p>
-
 		<?php } endforeach; ?>
-
-
-		<br><br><br><br>
-
-		<form action="alugar2.php" method="POST">
-			<div id="faixa1">
-				<br><strong>Escolha aqui:</strong><input type="radio" name="carro" value="<?php echo $carro['id'];?>"><br>
-			</div>
-			<div id="bloco">
-					<p>
-						<strong>Carro</strong> <?php echo $carro['nome']; ?><br>
-
-						<strong>Grupo</strong> <?php echo $carro['grupo']; ?><br>	
-
-						<strong>Placa</strong> <?php echo $carro['placa']; ?><br>	
-
-						<strong>id</strong> <?php echo $carro['id']; ?><br>
-					</p>
-			</div>
-
-		
-		<input type="submit" value="Continuar">
-		</form>
-
-	</div>
-	<div id="container">
-	<h2>Carros indisponíveis (Já locados):</h2>
-
-		<?php foreach($carros as $carro): if($carro['status'] == 1){ ?>
-			<div id="faixa1">
-				<p>Indisponível</p>
-			</div>
-			<div id="bloco">
-				<p>
-					<strong>Carro</strong> <?php echo $carro['nome']; ?><br>
-
-					<strong>Grupo</strong> <?php echo $carro['grupo']; ?><br>	
-
-					<strong>Placa</strong> <?php echo $carro['placa']; ?><br>	
-
-					<strong>id</strong> <?php echo $carro['id']; ?><br>
-				</p>
-			</div>
-	</div>
-
-		<?php } endforeach;  ?>
 
 </body>
 </html>
