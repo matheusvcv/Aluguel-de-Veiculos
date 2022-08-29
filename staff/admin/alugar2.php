@@ -5,6 +5,8 @@
 	require "../src/cliente.php";
 
 	$_SESSION['carro'] = $_POST['carro'];
+	$_SESSION['nome_carro'] = $_POST['nome_carro'];
+	$_SESSION['grupo'] = $_POST['grupo'];
 
 ?>
 <!DOCTYPE html>

@@ -55,33 +55,5 @@
 				<br><a href="../painel.php"><button>Cancelar</button></a>
 
 			</div>
-
-				<!-- <div id="faixa1">			
-						<p>Escolha aqui: <input type="radio" name="id_carro" value="<?php echo $carro['id']; ?>"></p>
-				</div>
-				<div id="bloco">
-							<p>
-								<strong>Carro</strong> <?php //echo $carro['nome']; ?><br>
-
-								<strong>Grupo</strong> <?php //echo $carro['grupo']; ?><br>	
-
-								<strong>Placa</strong> <?php //echo $carro['placa']; ?><br>	
-
-								<strong>id</strong> <?php //echo $carro['id']; ?><br>
-
-								<input type="hidden" name="<?php //echo $carro['id']; ?>">
-							</p><br>
-				</div><br>
-
-				<?php //} endforeach; ?>
-				
-				<div id="logo">
-					<input type="submit" value="Finalizar">
-				</div>
-			</div><br>
-			</form>
-			<div id="logo">
-				<a href="../painel.php"><button>Voltar</button></a>
-		</div> -->
 	</body>
 </html>

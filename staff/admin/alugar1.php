@@ -43,7 +43,9 @@
 
 					Placa <strong><?php echo $carro['placa']; ?></strong><br>	
 
-					<input type="hidden" name="carro" value="<?php echo $carro['id']; ?>"><br>
+					<input type="hidden" name="carro" value="<?php echo $carro['id']; ?>">
+					<input type="hidden" name="nome_carro" value="<?php echo $carro['nome']; ?>">
+					<input type="hidden" name="grupo" value="<?php echo $carro['grupo']; ?>"><br>
 
 	 			</button>
 
