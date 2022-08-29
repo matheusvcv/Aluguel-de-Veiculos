@@ -12,12 +12,16 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<link rel="shortcut icon" href="../../img/icons.png" type="icon/x-image">
 	<title>Aluguel de veículo</title>
 	<link rel="stylesheet" type="text/css" href="../../style.css">
 </head>
 <body>
 	<div id="faixa">
-		<h1>Fnalização de Aluguel</h1>
+		<div id="sair">
+ 			<a href="../logout.php"><button id="botao">Sair</button></a>
+ 		</div>
+		<h1>Formulário de Aluguel</h1>
 	</div>
 	<div id="container">
 		<p>Olá, <?php echo $_SESSION['nome']; ?>, você é um usuário cadastrado e está iniciando um aluguel de veículo. Inicalmente, defina o cliente que está efetuando a locação:</p>
@@ -45,5 +49,10 @@
 			<input type="submit" value="Continuar">
 		</div>
 		</form>
+		<div id="logo">
+
+			<br><a href="../painel.php"><button>Cancelar</button></a><br>
+		
+		</div>
 	</body>
 </html>

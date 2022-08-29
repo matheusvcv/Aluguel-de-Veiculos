@@ -21,7 +21,7 @@
 
 		<h2>Categorias disponíveis para locação:</h2>
 			<p>
-				Contamos com 06 veículos, divididos em 03 categorias. Com certeza, alguma delas irá se adequar perfeitamente no seu estilo de viagem e direção. Nós nos adequamos para deixar o seu aluguel totalmente personalizado. É possível encontrar modelos hatch compacto, sedan e SUVs.
+				Contamos com uma frota de 09 veículos, divididos em 03 categorias. Com certeza, alguma delas irá se adequar perfeitamente no seu estilo de viagem e direção. Nós nos adequamos para deixar o seu aluguel totalmente personalizado. É possível encontrar modelos hatch compacto, sedan e SUVs.
 			</p><br>
 		<h2>Qual o valor médio do aluguel de carros?</h2>
 			<p>

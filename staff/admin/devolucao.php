@@ -28,30 +28,52 @@
 			<h1>Devolução de veículo:</h1>
 		</div>
 		<div id="container">
-			<?php foreach($carros as $carro): if($carro['status'] == 1){  ?>
 			
-
 			<form method="POST" action="">
 
+			<?php foreach($carros as $carro): if($carro['status'] == 1){  ?>
 
-				<div id="faixa1">			
+				<button class="botaoCarro">
+
+					Carro <strong><?php echo $carro['nome']; ?></strong><br>
+
+					Grupo <strong><?php echo $carro['grupo']; ?></strong><br>	
+
+					Placa <strong><?php echo $carro['placa']; ?></strong><br>
+
+					id <strong><?php echo $carro['id']; ?></strong><br>
+
+					<input type="hidden" name="id_carro" value="<?php echo $carro['id']; ?>"><br>
+
+	 			</button>
+
+	 			<?php } endforeach; ?>
+
+	 		</form>
+	 		<div id="logo">
+
+				<br><a href="../painel.php"><button>Cancelar</button></a>
+
+			</div>
+
+				<!-- <div id="faixa1">			
 						<p>Escolha aqui: <input type="radio" name="id_carro" value="<?php echo $carro['id']; ?>"></p>
 				</div>
 				<div id="bloco">
 							<p>
-								<strong>Carro</strong> <?php echo $carro['nome']; ?><br>
+								<strong>Carro</strong> <?php //echo $carro['nome']; ?><br>
 
-								<strong>Grupo</strong> <?php echo $carro['grupo']; ?><br>	
+								<strong>Grupo</strong> <?php //echo $carro['grupo']; ?><br>	
 
-								<strong>Placa</strong> <?php echo $carro['placa']; ?><br>	
+								<strong>Placa</strong> <?php //echo $carro['placa']; ?><br>	
 
-								<strong>id</strong> <?php echo $carro['id']; ?><br>
+								<strong>id</strong> <?php //echo $carro['id']; ?><br>
 
-								<input type="hidden" name="<?php echo $carro['id']; ?>">
+								<input type="hidden" name="<?php //echo $carro['id']; ?>">
 							</p><br>
 				</div><br>
 
-				<?php } endforeach; ?>
+				<?php //} endforeach; ?>
 				
 				<div id="logo">
 					<input type="submit" value="Finalizar">
@@ -60,6 +82,6 @@
 			</form>
 			<div id="logo">
 				<a href="../painel.php"><button>Voltar</button></a>
-		</div>
+		</div> -->
 	</body>
 </html>

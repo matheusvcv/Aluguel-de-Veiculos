@@ -17,15 +17,24 @@
 <body>
 	<form action="alugar3.php" method="POST">
 		<div id="faixa">
+		<div id="sair">
+
+ 		<a href="../logout.php"><button id="botao">Sair</button></a>
+
+ 		</div>
 			<h1>Data de Retirada:</h1>
 		</div>
 		<div id="container">
 			<p>Agora escolha a data e o horário em que você deseja retirar o veículo na loja:</p>
 			<p><input type="datetime-local" name="horario_retirada"></p>
-		</div><br>
 		<div id="logo">
 			<input type="submit" value="Continuar">	
 		</div>
 	</form>
+		</div><br>
+
+	<div id="logo">
+		<br><a href="../painel.php"><button>Cancelar</button></a>
+	</div>
 </body>
 </html>

@@ -14,19 +14,26 @@
 <head>
 	<meta charset="utf-8">
 	<title>Aluguel de Veículos</title>
+	<link rel="shortcut icon" href="../../img/icons.png" type="icon/x-image">
 	<link rel="stylesheet" type="text/css" href="../../style.css">
 </head>
 <body>
 	<div id="faixa">
+	<div id="sair">
+
+ 		<a href="../logout.php"><button id="botao">Sair</button></a>
+
+ 	</div>
 		<h1>Agora escolha o veículo:</h1>
 	</div>
 	<div id="container">
-	<h2>Carros disponíveis para locação:</h2>
+	<h2>Carros disponíveis para locação:</h2><br>
+
+		<form action="alugar2.php" method="POST">
+
 		<?php foreach($carros as $carro): if($carro['status'] == 0){ ?>
 
-			<p>
-
-			<form action="alugar2.php" method="POST">
+			
 
 	 			<button class="botaoCarro">
 
@@ -40,13 +47,11 @@
 
 	 			</button>
 
-			</form>
-
-		</p>
-
 		<?php } endforeach; ?>
 
-		<h2>Carros disponíveis para locação:</h2>
+		</form>
+
+		<br><h2>Carros disponíveis para locação:</h2>
 
 		<?php foreach($carros as $carro): if($carro['status'] == 1){ ?>
 
@@ -60,10 +65,17 @@
 
 	 			</button>
 
-			</form>
 
 		<?php } endforeach; ?>
 
+	</div>
+	<div id="logo">
+
+		<br><a href="../painel.php"><button>Cancelar</button></a>
+
+	</div>
+
+			
 </body>
 </html>
 

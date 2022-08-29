@@ -15,6 +15,9 @@
 	<body>
 <body>
 	<div id="faixa">
+		<div id="sair">
+ 			<a href="../logout.php"><button id="botao">Sair</button></a>
+ 		</div>
 		<h1>Locação realizada com sucesso.</h1>
 	</div>
 	<div id="container">
