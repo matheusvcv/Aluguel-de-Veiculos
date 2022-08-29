@@ -87,4 +87,14 @@
 			$atualiza = $this->conexao->prepare("UPDATE carros SET status=1 WHERE  id = $carro");
 			$atualiza-> execute();
 		}
+
+		public function exibeReservas()
+		{
+			$exibeReservas = $this->conexao->query("SELECT id, cliente, horario_retirada, periodo, usuario, id_usuario, cpf_cliente, id_carro FROM reservas");
+
+			$exibe = $exibeReservas->fetch_all(MYSQLI_ASSOC);
+
+			return $exibe;
+		}
 	}
+

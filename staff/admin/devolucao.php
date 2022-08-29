@@ -12,8 +12,8 @@
 		header("Location: devolvido.php");
 	}
 
-	$carros_locado = New Cliente($conexao);
-	$carros = $carros_locado-> exibeCarros();
+	$reservasVeiculo = New Cliente($conexao);
+	$reservas = $reservasVeiculo-> exibeReservas();
 
 ?>
 <!DOCTYPE html>
