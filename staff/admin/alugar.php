@@ -35,7 +35,7 @@
 			<div id="bloco">
 					<br><strong>Nome:</strong> <a href="cadastro_ind.php?cpf=<?php echo $cliente['cpf']; ?>"> <?php echo $cliente['nome']; ?><br></a>
 					<strong>CPF:</strong> <?php echo $cliente['cpf']; ?><br>
-					<strong>Nascimento:</strong> <?php echo $cliente['nascimento']; ?><br>
+					<strong>Nascimento:</strong> <?php $data = strtotime($cliente['nascimento']); echo date('d/m/y', $data) ?><br>
 					<strong>E-mail:</strong> <?php echo $cliente['email']; ?><br>
 					<strong>Telefone:</strong> <?php echo $cliente['telefone']; ?><br>
 					<strong>Cidade:</strong> <?php echo $cliente['cidade']; ?><br>

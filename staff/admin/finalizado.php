@@ -25,7 +25,7 @@
 			<h2>Locação finalizada.</h2>
 		</div>
 
-		<p>Confirmado em sistema que o usuario <strong><?php echo strtoupper($_SESSION['nome']); ?></strong> efetuou a locação do veículo selecionado para o cliente  <strong><?php echo $_SESSION['cliente']; ?></strong>, pelo período de  <strong><?php echo $_SESSION['periodo'] ?></strong>.</p>
+		<p>Confirmado em sistema que o usuário <strong><?php echo strtoupper($_SESSION['nome']); ?></strong> efetuou a locação do veículo <?php echo $_SESSION['nome_carro']; ?> para o cliente  <strong><?php echo $_SESSION['cliente']; ?></strong>, pelo período de  <strong><?php echo $_SESSION['periodo'] ?></strong>.</p>
 		<p>
 
 		<div id="logo">
@@ -36,6 +36,7 @@
 				<strong>CPF: </strong> <?php echo $_SESSION['cpf']; ?><br>
 				<strong>Carro: </strong> <?php echo $_SESSION['nome_carro']; ?><br>
 				<strong>Retirada em: </strong> <?php $data = strtotime($_SESSION['horario_retirada']); echo date('d/m/y H:i:s', $data); ?><br>
+				<strong>Período: </strong><?php echo $_SESSION['periodo']; ?><br>
 				<strong>Usuário Locador: </strong> <?php echo $_SESSION['nome']; ?><br>
 
 			</p>
@@ -59,10 +60,6 @@
 
 						echo "Você escolheu um carro do <strong> Grupo " . $_SESSION['grupo'] . "</strong>. Carros deste grupo custam <strong>R$ 200,00</strong> por diária. ";
 					}
-			
-
-
-
 
 
 

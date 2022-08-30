@@ -6,9 +6,11 @@
 
 	$_SESSION['carro'] = $_POST['carro'];
 
-	die(var_dump($_SESSION['carro']));
-	$_SESSION['nome_carro'] = $_POST['nome_carro'];
-	$_SESSION['grupo'] = $_POST['grupo'];
+	$carros = New Cliente($conexao);
+	$carro = $carros-> exibeCarroIndividual($_SESSION['carro']);
+
+	$_SESSION['nome_carro'] = $carro['nome'];;
+	$_SESSION['grupo'] = $carro['grupo'];
 
 ?>
 <!DOCTYPE html>

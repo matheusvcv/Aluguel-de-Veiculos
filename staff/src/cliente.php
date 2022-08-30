@@ -96,5 +96,16 @@
 
 			return $exibe;
 		}
+
+
+		public function exibeCarroIndividual(int $id): array
+		{
+			$exibirCarros = $this->conexao->query("SELECT * FROM carros WHERE id = $id");
+
+			$exibir = $exibirCarros->fetch_assoc();
+
+			return $exibir;
+
+		}
 	}
 

@@ -110,7 +110,7 @@ p{
 	color: white;
 }
 
-#botaoCarro{
+.botaoCarro{
 	width: 200px;
 	height: 70px;
 	font-family: Verdana, Helvetica, Arial;

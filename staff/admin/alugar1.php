@@ -26,18 +26,19 @@
  	</div>
 		<h1>Agora escolha o veículo:</h1>
 	</div>
+
 	<div id="container">
-	<h2>Carros disponíveis para locação:</h2><br>
+
+		<h2>Carros disponíveis para locação:</h2><br>
 
 		<form action="alugar2.php" method="POST">
 
+		<p>
+
 		<?php foreach($carros as $carro): if($carro['status'] == 0){ ?>
 
-			
 
-	 			<div id="botaoCarro">
-
-	 				<input type="radio" name="carro_loc">
+	 			<button class="botaoCarro"  name="carro" value="<?php echo $carro['id']; ?>">
 
 					Carro <strong><?php echo $carro['nome']; ?></strong><br>
 
@@ -47,15 +48,14 @@
 
 					ID <strong><?php echo $carro['id']; ?></strong>
 
-					<input type="hidden" name="carro" value="<?php echo $carro['id']; ?>">
-					<input type="hidden" name="nome_carro" value="<?php echo $carro['nome']; ?>">
-					<input type="hidden" name="grupo" value="<?php echo $carro['grupo']; ?>"><br>
+				
+					<input type="hidden" name="grupo" value="<?php echo $carro['grupo']; ?>">
 
-	 			</div>
+				</button>
 
 		<?php } endforeach; ?>
 
-		<input type="submit">
+		</p>
 
 		</form>
 
@@ -77,6 +77,7 @@
 		<?php } endforeach; ?>
 
 	</div>
+	
 	<div id="logo">
 
 		<br><a href="../painel.php"><button>Cancelar</button></a>
