@@ -18,6 +18,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<link rel="shortcut icon" href="../../img/icons.png" type="icon/x-image">
 	<title></title>
 </head>
 <body>

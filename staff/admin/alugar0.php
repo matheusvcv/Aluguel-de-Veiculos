@@ -12,6 +12,7 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="shortcut icon" href="../../img/icons.png" type="icon/x-image">
+	<link rel="shortcut icon" href="../../img/icons.png" type="icon/x-image">
 	<title>Aluguel de Veículo</title>
 	<link rel="stylesheet" type="text/css" href="../../style.css">
 </head>

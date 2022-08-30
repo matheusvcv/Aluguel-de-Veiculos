@@ -11,7 +11,8 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title></title>
+	<title>Cliente Selecionado</title>
+	<link rel="shortcut icon" href="../../img/icons.png" type="icon/x-image">
 	<link rel="stylesheet" type="text/css" href="../../style.css">
 </head>
 <body>

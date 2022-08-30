@@ -23,6 +23,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Aluguel de veículo</title>
+	<link rel="shortcut icon" href="../../img/icons.png" type="icon/x-image">
 	<link rel="stylesheet" type="text/css" href="../../style.css">
 </head>
 <body>
@@ -49,7 +50,7 @@
 
 					<strong>Usuário: </strong><?php echo $reserva['usuario']; ?><br>
 
-					<strong>ID Veículo: </strong><?php echo $reserva['id_carro']; ?><br>
+					<?php $reserva['id_carro']; ?> <br>
 					
 				</button>
 

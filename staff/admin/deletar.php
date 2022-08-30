@@ -17,6 +17,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" width="device-width initial-scale=1.0">
+	<link rel="shortcut icon" href="../../img/icons.png" type="icon/x-image">
 	<title>Deletar Cadastro do Cliente</title>
 </head>
 <body>
