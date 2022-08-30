@@ -100,7 +100,7 @@
 				}
 
 			?><br>
-			<br><a href="../logout.php"><button>Voltar</button></a></p>
+			<p><a href="../painel.php"><button>Voltar</button></a></p>
 		</div>
 	</div>
 </body>

@@ -31,7 +31,7 @@
 		</div>
 		<div id="container">
 			
-			<form method="POST" action="devolvido.php">
+			<form method="POST" action="">
 
 			<?php foreach($reservas as $reserva):  ?>
 
