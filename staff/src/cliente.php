@@ -76,11 +76,11 @@
 		}
 
 
-		public function insereReserva(string $cliente, string $cpf_cliente, int $carro, string $horario_retirada, string $periodo, int $id_usuario){
+		public function insereReserva(string $cliente, string $cpf_cliente, int $carro, string $nome_carro, string $horario_retirada, string $periodo, int $id_usuario){
 
-			$insereReserva= $this->conexao->prepare("INSERT INTO reservas(cliente, cpf_cliente, id_carro, horario_retirada, periodo, id_usuario) VALUES(?,?,?,?,?,?)");
+			$insereReserva= $this->conexao->prepare("INSERT INTO reservas(cliente, cpf_cliente, id_carro, nome_carro, horario_retirada, periodo, id_usuario) VALUES(?,?,?,?,?,?,?)");
 
-			$insereReserva-> bind_param('ssissi', $cliente, $cpf_cliente, $carro, $horario_retirada, $periodo, $id_usuario);
+			$insereReserva-> bind_param('ssisssi', $cliente, $cpf_cliente, $carro, $nome_carro, $horario_retirada, $periodo, $id_usuario);
 
 			$insereReserva-> execute();
 
@@ -90,7 +90,7 @@
 
 		public function exibeReservas()
 		{
-			$exibeReservas = $this->conexao->query("SELECT id, cliente, horario_retirada, periodo, usuario, id_usuario, cpf_cliente, id_carro FROM reservas");
+			$exibeReservas = $this->conexao->query("SELECT id, cliente, horario_retirada, periodo, usuario, id_usuario, cpf_cliente, id_carro, nome_carro FROM reservas");
 
 			$exibe = $exibeReservas->fetch_all(MYSQLI_ASSOC);
 

@@ -9,7 +9,7 @@
 	if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 		$locacao = New Cliente($conexao);
-		$locado = $locacao-> insereReserva($_SESSION['cliente'],  $_SESSION['cpf'], $_SESSION['carro'], $_SESSION['horario_retirada'], $_SESSION['periodo'], $_SESSION['id']);
+		$locado = $locacao-> insereReserva($_SESSION['cliente'],  $_SESSION['cpf'], $_SESSION['carro'], $_SESSION['nome_carro'], $_SESSION['horario_retirada'], $_SESSION['periodo'], $_SESSION['id']);
 
 		header('Location: finalizado.php');
 	}

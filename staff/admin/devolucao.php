@@ -9,11 +9,14 @@
 		$devolucao_veiculo = New Cliente($conexao);
 		$devolucao = $devolucao_veiculo-> deletaReserva($_POST['id_carro']);
 
+		$_SESSION['cliente'] = $_POST['cliente'];
+
 		header("Location: devolvido.php");
 	}
 
 	$reservasVeiculo = New Cliente($conexao);
 	$reservas = $reservasVeiculo-> exibeReservas();
+
 
 ?>
 <!DOCTYPE html>
@@ -31,29 +34,57 @@
 			
 			<form method="POST" action="">
 
-			<?php foreach($carros as $carro): if($carro['status'] == 1){  ?>
+			<?php foreach($reservas as $reserva):  ?>
 
-				<button class="botaoCarro">
+				<button class="botaoReserva">
 
-					Carro <strong><?php echo $carro['nome']; ?></strong><br>
+					<strong>Cliente: </strong><?php echo $reserva['cliente']; ?><br>
 
-					Grupo <strong><?php echo $carro['grupo']; ?></strong><br>	
+					<input type="hidden" name="cliente" value="<?php echo $reserva['cliente']; ?>">
 
-					Placa <strong><?php echo $carro['placa']; ?></strong><br>
+					<strong>Veículo: </strong><?php echo $reserva['nome_carro']; ?><br>
 
-					id <strong><?php echo $carro['id']; ?></strong><br>
+					<strong>Retirada: </strong><?php echo $reserva['horario_retirada']; ?><br>
 
-					<input type="hidden" name="id_carro" value="<?php echo $carro['id']; ?>"><br>
+					<strong>Período de Loc:</strong><?php echo $reserva['periodo']; ?><br>
 
-	 			</button>
+					<strong>Usuário: </strong><?php echo $reserva['usuario']; ?><br>
 
-	 			<?php } endforeach; ?>
+					<strong>ID Veículo: </strong><?php echo $reserva['id_carro']; ?><br>
 
-	 		</form>
-	 		<div id="logo">
+					<input type="hidden" name="id_carro" value="<?php echo $reserva['id_carro']; ?>">
+					
+				</button>
+
+			<?php endforeach; ?>
+
+				</form>
+
+	 			<div id="logo">
 
 				<br><a href="../painel.php"><button>Cancelar</button></a>
 
 			</div>
 	</body>
 </html>
+
+
+				
+
+
+				<!-- <button class="botaoCarro">
+
+					Carro <strong><?php e//cho $carro['nome']; ?></strong><br>
+
+					Grupo <strong><?php //echo $carro['grupo']; ?></strong><br>	
+
+					Placa <strong><?php //echo $carro['placa']; ?></strong><br>
+
+					id <strong><?php //echo $carro['id']; ?></strong><br>
+
+					<input type="hidden" name="id_carro" value="<?php echo $carro['id']; ?>"><br>
+
+	 			</button> -->
+
+	 			
+

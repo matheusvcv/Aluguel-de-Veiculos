@@ -18,7 +18,7 @@
 		<h1>Veículo Devolvido Com Sucesso.</h1>
 	</div>
 	<div id="container">
-		<p>Confirmado em sistema que o cliente <?php echo $_SESSION['cliente']; ?> efetuou a devolução do veículo para o colaborador <?php echo $_SESSION['nome'] ?>.</p>
+		<p>Confirmado em sistema que o cliente <strong><?php echo $_SESSION['cliente']; ?></strong> efetuou a devolução do veículo para o colaborador <strong><?php echo $_SESSION['nome'] ?></strong>.</p>
 		<p><a href="../painel.php"><button>Voltar</button></a></p>
 	</div>
 </body>

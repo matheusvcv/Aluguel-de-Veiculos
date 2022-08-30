@@ -35,35 +35,41 @@
 
 			
 
-	 			<button class="botaoCarro">
+	 			<div id="botaoCarro">
+
+	 				<input type="radio" name="carro_loc">
 
 					Carro <strong><?php echo $carro['nome']; ?></strong><br>
 
 					Grupo <strong><?php echo $carro['grupo']; ?></strong><br>	
 
-					Placa <strong><?php echo $carro['placa']; ?></strong><br>	
+					Placa <strong><?php echo $carro['placa']; ?></strong><br>
+
+					ID <strong><?php echo $carro['id']; ?></strong>
 
 					<input type="hidden" name="carro" value="<?php echo $carro['id']; ?>">
 					<input type="hidden" name="nome_carro" value="<?php echo $carro['nome']; ?>">
 					<input type="hidden" name="grupo" value="<?php echo $carro['grupo']; ?>"><br>
 
-	 			</button>
+	 			</div>
 
 		<?php } endforeach; ?>
+
+		<input type="submit">
 
 		</form>
 
 		<br><h2>Carros disponíveis para locação:</h2>
 
-		<?php foreach($carros as $carro): if($carro['status'] == 1){ ?>
+		<?php foreach($carros as $carro_loc): if($carro_loc['status'] == 1){ ?>
 
 	 			<button class="botaoCarro" style="background-color: #696969;">
 
-					Carro <strong><?php echo $carro['nome']; ?></strong><br>
+					Carro <strong><?php echo $carro_loc['nome']; ?></strong><br>
 
-					Grupo <strong><?php echo $carro['grupo']; ?></strong><br>	
+					Grupo <strong><?php echo $carro_loc['grupo']; ?></strong><br>	
 
-					Placa <strong><?php echo $carro['placa']; ?></strong><br>	
+					Placa <strong><?php echo $carro_loc['placa']; ?></strong><br>	
 
 	 			</button>
 

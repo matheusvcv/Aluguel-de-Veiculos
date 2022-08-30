@@ -102,30 +102,8 @@
 
 				}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 			?><br>
-
-			<br><a href="../painel.php"><button>Voltar</button></a></p>
+			<br><a href="../logout.php"><button>Voltar</button></a></p>
 		</div>
 	</div>
 </body>
