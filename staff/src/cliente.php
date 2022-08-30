@@ -97,6 +97,14 @@
 			return $exibe;
 		}
 
+		public function exibeReservaIndividual(int $id): array
+		{
+			$exibirCarros = $this->conexao->query("SELECT * FROM reservas WHERE id_carro = $id");
+
+			$exibir = $exibirCarros->fetch_assoc();
+
+			return $exibir;
+		}
 
 		public function exibeCarroIndividual(int $id): array
 		{

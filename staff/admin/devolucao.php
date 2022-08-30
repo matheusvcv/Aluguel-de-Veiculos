@@ -4,18 +4,17 @@
 	require "../conexao.php";
 	require "../src/cliente.php";
 
-	if($_SERVER['REQUEST_METHOD'] === 'POST'){
-
-		$devolucao_veiculo = New Cliente($conexao);
-		$devolucao = $devolucao_veiculo-> deletaReserva($_POST['id_carro']);
-
-		$_SESSION['cliente'] = $_POST['cliente'];
-
-		header("Location: devolvido.php");
-	}
 
 	$reservasVeiculo = New Cliente($conexao);
 	$reservas = $reservasVeiculo-> exibeReservas();
+
+	if($_SERVER['REQUEST_METHOD'] === 'POST'){
+
+		$_SESSION['id_carro'] = $_POST['reserva'];
+
+		header('Location: devolvido.php');
+
+	}
 
 
 ?>
@@ -32,11 +31,11 @@
 		</div>
 		<div id="container">
 			
-			<form method="POST" action="">
+			<form method="POST" action="devolvido.php">
 
 			<?php foreach($reservas as $reserva):  ?>
 
-				<button class="botaoReserva">
+				<button class="botaoReserva" name="reserva" value="<?php echo $reserva['id_carro']; ?>">
 
 					<strong>Cliente: </strong><?php echo $reserva['cliente']; ?><br>
 
@@ -51,8 +50,6 @@
 					<strong>Usuário: </strong><?php echo $reserva['usuario']; ?><br>
 
 					<strong>ID Veículo: </strong><?php echo $reserva['id_carro']; ?><br>
-
-					<input type="hidden" name="id_carro" value="<?php echo $reserva['id_carro']; ?>">
 					
 				</button>
 
