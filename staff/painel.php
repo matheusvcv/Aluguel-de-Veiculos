@@ -15,9 +15,9 @@
 <body>
 	<!-- Início do NavBar -->
 
-	<nav class="navbar navbar-expand-lg navbar-dark fundo_preto fixed-top">
+	<nav class="navbar navbar-expand-lg navbar-dark fundo_preto fixed-top" style="background-color: #006400;">
 	  <div class="container-fluid">
-	    <a class="navbar-brand" href="#"><img src="img/cosvip.png"></a>
+	    <a class="navbar-brand" href="#"><img src="../img/icons.png" width="30px" height="30px"></a>
 	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 	      <span class="navbar-toggler-icon"></span>
 	    </button>
@@ -27,19 +27,22 @@
 	          <a class="nav-link active" aria-current="page" href="#">Início</a>
 	        </li>
 	        <li class="nav-item">
-	          <a class="nav-link" href="experiencias-escritas.php">Experiências Escritas</a>
+	          <a class="nav-link" href="admin/cadastro.php">Cadastrar Novo Cliente</a>
 	        </li>
 	        <li class="nav-item">
-	          <a class="nav-link" href="costaviana-enterprise.php">CostaViana Enterprise</a>
+	          <a class="nav-link" href="admin/consulta.php">Consultar Cliente</a>
 	        </li>
 	        <li class="nav-item">
-	          <a class="nav-link" href="pagina-desenvolvedor.php">Página do Desenvolvedor</a>
+	          <a class="nav-link" href="admin/alugar.php">Realizar uma locação</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="admin/devolucao.php">Receber uma devolução</a>
 	        </li>
 	      </ul>
 	    </div>
 	  </div>
 	</nav>
- 	<br>
+ 	<br><br><br>
  	<div id="faixa">
  		<div id="sair">
  			<a href="logout.php"><button id="botao">Sair</button></a>
