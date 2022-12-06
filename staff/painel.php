@@ -54,6 +54,14 @@
  		
  		<br>
 
+ 	<article class="card borda-cor-especial card-largura p-0 m-4 col-12 col-md-4">
+	    <div class="card-body">
+	      <h5 class="card-title">Cadastrar um novo Cliente</h5>
+	      <p class="card-text">Clique no botão abaixo para criar um cadastro para um novo cliente.</p>
+	      <a href="admin/cadastro.php" class="btn botao-cor-especial">Clique aqui</a>
+	    </div>
+    </article>
+
  		<div id="logo">
 
 	 		<p>
