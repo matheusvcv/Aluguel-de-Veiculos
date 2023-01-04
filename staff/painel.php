@@ -57,7 +57,7 @@
 
  		<section class="container-fluid" id="links" style="margin-bottom: 60px;">
 		<div class="row justify-content-center">
-			<article class="card card-estilo p-0 m-3 col-12 col-md-3" style="width: 18rem;">
+			<article class="card card-largura p-0 m-3 col-12 col-md-3" style="width: 18rem;">
 				<div class="barra">
 					<h5 class="card-title card-titulo" style="padding: 5px 15px; padding-bottom: 0px">Cadastrar um novo Cliente</h5>
 				</div>
