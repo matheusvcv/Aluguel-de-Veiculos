@@ -40,19 +40,36 @@
 	        </li>
 	      </ul>
 	    </div>
+	    <div id="sair">
+ 			<a href="logout.php"><button id="botao">Sair</button></a>
+ 		</div>
 	  </div>
 	</nav>
  	<br><br><br>
  	<div id="faixa">
- 		<div id="sair">
- 			<a href="logout.php"><button id="botao">Sair</button></a>
- 		</div>
+ 		
  		<h1>Aluguel de veículos</h1>
  	</div>
  	<div id="container">
  		<?php echo "Seja bem vindo, colaborador <strong>" . strtoupper($_SESSION['nome']) . "</strong> o que deseja fazer?"; ?><br>
  		
  		<br>
+
+ 		<section class="container-fluid" id="links" style="margin-bottom: 60px;">
+		<div class="row justify-content-center">
+			<article class="card card-estilo p-0 m-3 col-12 col-md-3" style="width: 18rem;">
+				<div class="barra">
+					<h5 class="card-title card-titulo" style="padding: 5px 15px; padding-bottom: 0px">Cadastrar um novo Cliente</h5>
+				</div>
+				<div class="card-body">
+					<img src="../img/client.png" style="padding-bottom: 10px;">
+					<p class="card-text card-texto" style="padding-bottom: 5px;">Clique no botão abaixo para criar um cadastro para um novo cliente.</p>
+					<a href="#" target="blank" class="btn botao-cor-especial" >Clique Aqui</a>
+				</div>
+			</article>
+		</div>
+		</section>
+
 
  	<article class="card borda-cor-especial card-largura p-0 m-4 col-12 col-md-4">
 	    <div class="card-body">
